@@ -31,6 +31,9 @@ gem 'haml-rails'
 # Incluir gema de devise que esta en el master para que sea compatible con rails5 para el usuario/repositorio
 gem 'devise', github: "plataformatec/devise"
 
+# Gema Omniauth para autenticar con FaceBook
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

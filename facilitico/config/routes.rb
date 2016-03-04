@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controlles:{
+  devise_for :users, controllers:{
   	# diereccionamientos de los provides tenemos un controlador dentro de users llamado omniauth_callbacks
   	omniauth_callbacks: "users/omniauth_callbacks"
   }

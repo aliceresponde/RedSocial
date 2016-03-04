@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # get 'main/home'
+  # se crea la ruta para  main/home, por default rails busca la vista con el nombre del controlador 
   root 'main#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

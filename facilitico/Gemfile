@@ -24,6 +24,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # Action Cable dependencies for the Redis adapter
 gem 'redis', '~> 3.0'
+
+# use gem haml-rails para no tener que cerrar las etiquetas, basta con solo identar
+gem 'haml-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

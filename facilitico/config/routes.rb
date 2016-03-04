@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controlles:{
+  	# diereccionamientos de los provides tenemos un controlador dentro de users llamado omniauth_callbacks
+  	omniauth_callbacks: "users/omniauth_callbacks"
+  }
   # get 'main/home'
   # se crea la ruta para  main/home, por default cuando solo se pone el dominio rails busca la vista con el nombre del controlador 
   # buscando la vista de la carpeta del controlador, asociado a la accion, asi este no tenga el render
   root 'main#home'
+
+  #necesito configurar las rutas para que facebook sepa a donde llegara su respuesta callback_url
+  #Procesar info FB
+  # Autenticar o crear user
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

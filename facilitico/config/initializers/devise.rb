@@ -244,7 +244,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   # Config el proveedor FaceBook con el APP_ID, y el APP_SECRET y el callback_URL
-  config.omniauth :faceBook  , "528342134011135" , "0aae0e4c4074774bcac460925753762e", callback_url: "localhost:3000/"
+  config.omniauth :facebook  , "528342134011135" , "0aae0e4c4074774bcac460925753762e", callback_url: "localhost:300/"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

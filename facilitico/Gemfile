@@ -28,6 +28,9 @@ gem 'redis', '~> 3.0'
 # use gem haml-rails para no tener que cerrar las etiquetas, basta con solo identar
 gem 'haml-rails'
 
+# Incluir gema de devise que esta en el master para que sea compatible con rails5 para el usuario/repositorio
+gem 'devise', github: "plataformatec/devise"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -12,6 +12,8 @@ class Users::OmniauthCallbacksController < ApplicationController
 		# raise request.env["omniauth.auth"].to_yaml
 
 		@user = User.from_omniauth(request.env["omniauth.auth"])
+		
+
 		# verifico si el usuario esta almacenado en DB
 		if @user.persisted?
 			# guarda la sesion 
@@ -20,9 +22,18 @@ class Users::OmniauthCallbacksController < ApplicationController
 			sign_in_and_redirect @user , event: :authentication			
 		end
 
+		session["devise.auth"]=request.env["omniauth.auth"]
+
 		# si no viene el emial podre ir al formulario
 		render :edit
+	end
 
 
+
+	def custom_sign_up
+		@user = User.from_omniauth(session["devise.auth"])
+		
+		#Parametros fuertes 
+		# @user=
 	end
 end

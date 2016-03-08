@@ -1,13 +1,8 @@
-
- =form_tag "/custom_sign_up", method: :post do
-
- / Enlista los errores por los que este usuario no se creo corectamente
+=form_tag "/custom_sign_up", method: :post do
 	%ul 
 		-@user.errors.full_messages.each do |error|
 			%li= error
 
-
-   /Creo un campo de texto  llamado "user[username]" con value = "@user.username" 
 	%div 
 		%label{for: "user_username"} Nombre de usuario
 		=text_field_tag "user[username]" , @user.username
@@ -18,7 +13,7 @@
 
 	%div 
 		%label{for: "user_name"} Nombre
-		=text_field_tag "user[name]" , @user.username		
+		=text_field_tag "user[name]" , @user.name		
 
 	%div 
 		=submit_tag "Completar registro"

@@ -1,6 +1,14 @@
 - nombre  =  "Alicia "
+- user = @user
+
 %h1 Bienvenido a la pagina 
 %p 
 	Estamos usando HAML con 
-	=nombre
+
+/ =user.name
+
+-if user_signed_in?
+	
+	= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete	
+
 

@@ -19,5 +19,10 @@ class Users::OmniauthCallbacksController < ApplicationController
 			# autenticar al user  y redireccionarlo al home
 			sign_in_and_redirect @user , event: :authentication			
 		end
+
+		# si no viene el emial podre ir al formulario
+		render :edit
+
+
 	end
 end

@@ -15,7 +15,8 @@ class User < ApplicationRecord
 			# ese user se ha creado
 			# veifio los datos q tengo de la info del user, como email, pass 
 			if auth[:info] #si tra el  hash del info, lleno los datos
-				user.email = auth[:info][:email]
+				# user.email = auth[:info][:email]
+				# note for user that has not email, 
 				user.name  = auth[:info][:name]
 			end
 			# creo una cadena, con caracteres aleatoreos (20) para emular el pass

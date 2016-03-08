@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # buscando la vista de la carpeta del controlador, asociado a la accion, asi este no tenga el render
   root 'main#home'
 
+  # verbo       URL                   modelo/controlador#vista
+  post          "custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" 
+
   #necesito configurar las rutas para que facebook sepa a donde llegara su respuesta callback_url
   #Procesar info FB
   # Autenticar o crear user
